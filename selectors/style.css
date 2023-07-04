@@ -1,0 +1,90 @@
+ul {
+	background-color: dodgerblue;
+}
+
+ul li {
+	color: white;
+	font-family: sans-serif;
+}
+
+ul li::marker {
+	content: "😀 ";
+}
+ul li:nth-child(5) {
+	text-transform: capitalize;
+}
+
+li > ul > li {
+	color: red;
+}
+
+li {
+	& ul {
+		& li {
+			color: blue;
+		}
+	}
+}
+
+.card {
+	background-color: antiquewhite;
+	padding: 32px;
+	border-radius: 16px;
+	/* .card p */
+	& p::first-letter {
+		text-transform: uppercase;
+		color: pink;
+	}
+	& span {
+		font-weight: 700;
+	}
+	.title {
+		font-size: 2rem;
+		text-transform: capitalize;
+	}
+}
+
+element sub-element {
+}
+
+element > direct-children {
+}
+
+ol > li:nth-child(1) + li {
+	color: blue;
+}
+
+/* h3 ~ p {
+} */
+
+ul:has(a) {
+	all: initial;
+}
+
+article:not(:has(#main-title)) p {
+	color: burlywood;
+}
+
+input {
+	background-color: gray;
+}
+input:focus {
+	background-color: red;
+}
+
+input[type="password"] {
+	color: green;
+}
+
+a[href*="oo"] {
+	font-size: 2rem;
+}
+a[href^="https"] {
+	color: lightblue;
+}
+
+a[href$=".com"] {
+	background-color: lightgreen;
+	border-radius: 8px;
+	padding: 8px;
+}
